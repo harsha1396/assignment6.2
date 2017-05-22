@@ -1,0 +1,59 @@
+1. Why MapReduce program is needed in Pig Programming?
+
+Pig is a high-level platform that makes many Hadoop data analysis issues easier to execute.
+A program written in Pig Latin is a data flow language which needs an execution engine to execute the query.
+So when a program is written in Pig Latin the Pig compiler converts the program into MapReduce jobs for the execution.
+Hence we need MapReduce program in Pig.
+
+2. What are advantages of Pig over MapReduce?
+
+->Apache Pig is a high-level data flow platform whereas MapReduce is a low-level data processing paradigm.
+->Without writing complex Java implementations in MapReduce the programmers can achieve the same implementations very easily using Pig Latin.
+->Apache Pig provides nested data types like tuples, bags and maps that are not available in MapReduce.
+->Pig provides many built-in operators to support data operations like joins, filters, ordering, sorting etc. 
+Whereas to perform the same function in MapReduce it becomes difficult due to the absence of such data operations.
+
+3. What is Pig engine and what is its importance?
+
+Pig Engine accepts the Pig Latin scripts as input and converts those scripts into MapReduce jobs.
+Importance:
+*It acts as an interpreter between Pig Latin scripts and MapReduce jobs.
+*It creates the environment to execute Pig scripts into series of MapReduce jobs in a parallel manner.
+
+4. What are the modes of Pig execution?
+There are two modes in Pig execution:-
+
+Local Mode->To run Pig in local mode we need access to a single machine.
+All the files are installed and run using the local host and file system. 
+We need to specify local mode using the -x flag.
+
+Mapreduce Mode->To run Pig in mapreduce mode we need access to Hadoop cluster and HDFS.
+Mapreduce mode is the default mode.
+We don't need to specify it using the -x flag.
+
+5. What is Grunt Shell in Pig?
+
+The Grunt shell of Apache Pig is mainly used to write Pig Latin scripts. 
+After invoking the Grunt shell we can run the Pig scripts in the shell.
+we can invoke any shell commands using sh and fs.
+Using sh command we can invoke any shell commands from the Grunt shell but we cannot execute the commands that are a part of the shell environment.
+Using the fs command we can invoke any FsShell commands from the Grunt shell.
+
+6. What are the features of Pig Latin language?
+
+->Pig Latin is a dataflow language. 
+->Each processing step results in a new data set or relation.
+->The Pig Latin is automatically converted to Mapreduce jobs by the execution engine.
+->It has support to process huge amounts of data.
+->It has many built-in operators and also supports the creation of user defined functions in other programming languages and Pig scripts.
+
+7. Is Pig Latin commands case sensitive?
+
+Keywords and Parameters in Pig Latin are not case-sensitive.
+But relation,field names and UDF names are case-sensitive.
+
+8. What is a data flow language?
+
+Data flow language is a  graphical language for functional programming which has a data or work flow approach. 
+It is a paradigm that models a program as a directed graph of the data flowing between operations.
+
